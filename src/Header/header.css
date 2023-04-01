@@ -26,6 +26,12 @@ span {
 
 #searchIcon {
     height: 30px;
+    transition: transform 0.3s linear;
+}
+
+#searchIcon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 h1 {
