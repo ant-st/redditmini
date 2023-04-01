@@ -1,4 +1,5 @@
 import {Header} from "../Header/header";
+import {ContainersGallery} from "../ContainersGallery/ContainersGallery";
 import './App.css';
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <div id="App">
       <Header/>
       <div id="content">
-        <div className="container">I am a div</div>
+        <ContainersGallery/>
       </div>
     </div>
   );

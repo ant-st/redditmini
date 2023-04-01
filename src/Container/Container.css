@@ -1,0 +1,54 @@
+.container {
+    display: grid;
+    width: 40%;
+    height: auto;
+    min-width: 400px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 40px;
+    grid-template: fit-content(100px) fit-content(200px) fit-content(100px) / 15% 85%;
+    grid-template-areas: "header header" "vote content" ". footer";
+    animation: summonOpacity 1s linear;
+}
+
+.container h2 {
+    grid-area: header;
+    margin: 20px auto;
+
+}
+
+.container .voting {
+    grid-area: vote;
+}
+
+.container .voting img{
+    width: 60%;
+}
+
+.container .redditPic  {
+    grid-area: content;
+    width: 90%;
+}
+
+.container .caption {
+    grid-area: footer;
+    text-align: right;
+    padding-right: 10%;
+}
+
+.container h3 {
+    font-size: 16px;
+}
+
+.container h3 span {
+    color: #FA2300;
+}
+
+@keyframes summonOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
