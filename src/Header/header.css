@@ -56,5 +56,30 @@ header:hover > h1 {
 
 header:hover > input {
     width: 250px;
+}
 
+@keyframes shrinkH1 {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes expandInput {
+    100% {
+        width: 150px;
+    }
+}
+
+@media screen and (width < 960px) {
+    h1 {
+        animation: shrinkH1;
+        animation-delay: 1s;
+    }
+    input {
+        animation: expandInput;
+        animation-delay: 1s;
+    }
+    header:hover > input {
+        width: 150px;
+    }
 }
