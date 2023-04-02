@@ -14,7 +14,7 @@
 .container h2 {
     grid-area: header;
     margin: 20px auto;
-
+    padding: 0 20px;
 }
 
 .container .voting {

@@ -1,10 +1,12 @@
 import './header.css'
-import {useDispatch} from "react-redux";
-import {handleSearchTerm} from "../store";
-import {useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {handleSearchTerm, loadData, selectSearchTerm} from "../store";
+import {useEffect, useState} from "react";
 
 export const Header = () => {
     const dispatch = useDispatch();
+    const searchTerm = useSelector(selectSearchTerm);
+
     const [term, setTerm] = useState('');
 
     const handleTermChange = ({target}) => {
@@ -18,6 +20,11 @@ export const Header = () => {
     const handleSearch = () => {
         dispatch(handleSearchTerm(term));
     }
+
+    useEffect(() => {
+        dispatch(loadData(searchTerm));
+        // eslint-disable-next-line
+    }, [searchTerm]);
 
     return (
         <header>
