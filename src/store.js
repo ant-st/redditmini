@@ -1,7 +1,7 @@
 import {configureStore, createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 
 export const loadData = createAsyncThunk("reddit/loadData", async (query) => {
-    console.log('fetching started');
+    console.log('fetching started: ' + query);
     query = query.replaceAll(' ','%20');
     return fetch('https://www.reddit.com/search.json?q=' + query).then(response => response.json());
 })

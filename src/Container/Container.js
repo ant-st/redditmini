@@ -13,15 +13,10 @@ export const Container = (props) => {
                 <img src={require('./downArrow.png')} alt="down arrow"/>
             </div>
             {
-
                 data.imageUrl ?
-                    <img src={data.imageUrl} className="redditPic" alt="content"/>
+                    <img src={data.imageUrl} className="redditContent" alt="Content"/>
                     :
-                    data.isGallery ?
-                        <img src={data.thumbnail} className="redditPic" alt="content"/>
-                        :
-                        data.selftext
-
+                    <p className="redditContent selftext">{data.selftext}</p>
             }
             <h3 className="caption">posted by {data.author} <span>@</span> {postDate.toLocaleString()}</h3>
         </div>

@@ -25,10 +25,12 @@
     width: 60%;
 }
 
-.container .redditPic  {
+.redditContent  {
     grid-area: content;
     width: 90%;
+    word-break: break-all;
 }
+
 
 .container .caption {
     grid-area: footer;
